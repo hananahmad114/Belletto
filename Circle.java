@@ -14,7 +14,9 @@ public class Circle extends Ellipse {
     
     // setVars
     @Override
+
     public void setVars(Pixel start, Pixel end, Color color) {
+
         int side1 = Math.abs(end.getX()-start.getX());
         int side2 = Math.abs(end.getY()-start.getY());
         int side = side1 > side2 ? side2 : side1;

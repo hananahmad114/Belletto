@@ -33,97 +33,145 @@ public class MainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFrame1 = new javax.swing.JFrame();
         colors = new javax.swing.JColorChooser();
-        jToolBar1 = new javax.swing.JToolBar();
-        drawingParent = new javax.swing.JPanel();
-        buttonPane = new javax.swing.JPanel();
+        tlbStandard = new javax.swing.JToolBar();
+        butNew = new javax.swing.JButton();
+        butOpen = new javax.swing.JButton();
+        butSave = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JToolBar.Separator();
+        butUndo = new javax.swing.JButton();
+        butRedo = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JToolBar.Separator();
         butSelect = new javax.swing.JButton();
         butFill = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        jSeparator3 = new javax.swing.JToolBar.Separator();
+        butAbout = new javax.swing.JButton();
+        drawingParent = new javax.swing.JPanel();
+        buttonPane = new javax.swing.JPanel();
+        menuMain = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Belletto 1.01");
 
         colors.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jToolBar1.setRollover(true);
+        tlbStandard.setFloatable(false);
+        tlbStandard.setRollover(true);
+
+        butNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/document-new.png"))); // NOI18N
+        butNew.setText("New");
+        butNew.setFocusable(false);
+        butNew.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        butNew.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        tlbStandard.add(butNew);
+
+        butOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/document-open.png"))); // NOI18N
+        butOpen.setText("Open");
+        butOpen.setFocusable(false);
+        butOpen.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        butOpen.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        tlbStandard.add(butOpen);
+
+        butSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/document-save.png"))); // NOI18N
+        butSave.setText("Save");
+        butSave.setFocusable(false);
+        butSave.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        butSave.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        tlbStandard.add(butSave);
+        tlbStandard.add(jSeparator1);
+
+        butUndo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/undo.png"))); // NOI18N
+        butUndo.setText("Undo");
+        butUndo.setFocusable(false);
+        butUndo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        butUndo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        tlbStandard.add(butUndo);
+
+        butRedo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redo.png"))); // NOI18N
+        butRedo.setText("Redo");
+        butRedo.setFocusable(false);
+        butRedo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        butRedo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        tlbStandard.add(butRedo);
+        tlbStandard.add(jSeparator2);
+
+        butSelect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/drag-arrow.png"))); // NOI18N
+        butSelect.setText("Select");
+        butSelect.setFocusable(false);
+        butSelect.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        butSelect.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        butSelect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butSelectActionPerformed(evt);
+            }
+        });
+        tlbStandard.add(butSelect);
+
+        butFill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fill.png"))); // NOI18N
+        butFill.setText("Fill");
+        butFill.setFocusable(false);
+        butFill.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        butFill.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        butFill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butFillActionPerformed(evt);
+            }
+        });
+        tlbStandard.add(butFill);
+        tlbStandard.add(jSeparator3);
+
+        butAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/about.png"))); // NOI18N
+        butAbout.setText("About");
+        butAbout.setFocusable(false);
+        butAbout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        butAbout.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        tlbStandard.add(butAbout);
 
         drawingParent.setBackground(new java.awt.Color(255, 255, 255));
+        drawingParent.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout drawingParentLayout = new javax.swing.GroupLayout(drawingParent);
         drawingParent.setLayout(drawingParentLayout);
         drawingParentLayout.setHorizontalGroup(
             drawingParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 583, Short.MAX_VALUE)
         );
         drawingParentLayout.setVerticalGroup(
             drawingParentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        butSelect.setText("Select");
-        butSelect.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butSelectActionPerformed(evt);
-            }
-        });
-
-        butFill.setText("Fill");
-        butFill.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butFillActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout buttonPaneLayout = new javax.swing.GroupLayout(buttonPane);
         buttonPane.setLayout(buttonPaneLayout);
         buttonPaneLayout.setHorizontalGroup(
             buttonPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(buttonPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(buttonPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(butSelect, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
-                    .addComponent(butFill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addGap(0, 133, Short.MAX_VALUE)
         );
         buttonPaneLayout.setVerticalGroup(
             buttonPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(buttonPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(butSelect)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(butFill)
-                .addContainerGap(67, Short.MAX_VALUE))
+            .addGap(0, 135, Short.MAX_VALUE)
         );
 
         jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        menuMain.add(jMenu1);
 
         jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        menuMain.add(jMenu2);
 
-        setJMenuBar(jMenuBar1);
+        jMenu3.setText("Help");
+        menuMain.add(jMenu3);
+
+        setJMenuBar(menuMain);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(colors, javax.swing.GroupLayout.DEFAULT_SIZE, 746, Short.MAX_VALUE)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tlbStandard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(buttonPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -134,15 +182,15 @@ public class MainWindow extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tlbStandard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(buttonPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 146, Short.MAX_VALUE))
+                        .addGap(0, 158, Short.MAX_VALUE))
                     .addComponent(drawingParent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(colors, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(colors, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -155,6 +203,8 @@ public class MainWindow extends javax.swing.JFrame {
         
         for(MouseMotionListener mml : drawingArea.getMouseMotionListeners())
             drawingArea.removeMouseMotionListener(mml);
+        
+        drawingArea.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         
         drawingArea.addMouseListener(new MouseAdapter() {
             @Override
@@ -182,6 +232,7 @@ public class MainWindow extends javax.swing.JFrame {
                 
             }
         });
+        
     }//GEN-LAST:event_butSelectActionPerformed
 
     private void butFillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butFillActionPerformed
@@ -193,6 +244,8 @@ public class MainWindow extends javax.swing.JFrame {
         
         for(MouseMotionListener mml : drawingArea.getMouseMotionListeners())
             drawingArea.removeMouseMotionListener(mml);
+        
+        drawingArea.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         
         drawingArea.addMouseListener(new MouseAdapter() {
             @Override
@@ -218,6 +271,7 @@ public class MainWindow extends javax.swing.JFrame {
                 
             }
         });
+        
     }//GEN-LAST:event_butFillActionPerformed
 
     public static void addLibrary(Class someClass)
@@ -272,6 +326,7 @@ public class MainWindow extends javax.swing.JFrame {
                 
                 // color selector:
                 colorSel = win.colors;
+                colorSel.setPreviewPanel(new JPanel());
                 
                 // initialize shapes class:
                 Shapes.initStuff(win.buttonPane, drawingArea, colorSel);
@@ -300,16 +355,26 @@ public class MainWindow extends javax.swing.JFrame {
         });
         
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton butAbout;
     private javax.swing.JButton butFill;
+    private javax.swing.JButton butNew;
+    private javax.swing.JButton butOpen;
+    private javax.swing.JButton butRedo;
+    private javax.swing.JButton butSave;
     private javax.swing.JButton butSelect;
+    private javax.swing.JButton butUndo;
     private javax.swing.JPanel buttonPane;
     private javax.swing.JColorChooser colors;
     private javax.swing.JPanel drawingParent;
-    private javax.swing.JFrame jFrame1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JToolBar.Separator jSeparator1;
+    private javax.swing.JToolBar.Separator jSeparator2;
+    private javax.swing.JToolBar.Separator jSeparator3;
+    private javax.swing.JMenuBar menuMain;
+    private javax.swing.JToolBar tlbStandard;
     // End of variables declaration//GEN-END:variables
 }

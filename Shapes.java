@@ -1,5 +1,7 @@
 
 import java.awt.event.*;
+import java.awt.*;
+import java.net.URL;
 import java.util.*;
 import javax.swing.*;
 
@@ -75,6 +77,8 @@ public class Shapes {
         for(MouseMotionListener mml : drawingArea.getMouseMotionListeners())
             drawingArea.removeMouseMotionListener(mml);
         
+        drawingArea.setCursor(new java.awt.Cursor(Cursor.CROSSHAIR_CURSOR));
+        
         unselectAll();
         
         drawingArea.addMouseListener(new MouseAdapter() {
@@ -121,6 +125,9 @@ public class Shapes {
     // add button:
     public static void addButton(String butName) {
         JButton button = new JButton(butName);
+        button.setIcon(new javax.swing.ImageIcon(
+                Shapes.class.getClassLoader().getResource(butName+".png")));
+        
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
